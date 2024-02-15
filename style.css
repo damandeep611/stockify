@@ -1,0 +1,635 @@
+
+:root {
+  /* ===============color pallet============ */
+  --primary-color: #2762ea;
+  --accent-color:#2762ea;
+  --accent-dark: #346beb;
+  --main-gray:#b9ccf8;
+  --light-accent: #e2eafc;
+  --main-dark:#0D0D0D;
+  --primary-white: #fff ;
+  --section-back: #008080 ;
+
+  /* ==============extra colors======== */
+    
+  
+    --palette-color-3: rgb(66, 84, 102);
+    --palette-blue: rgb(0, 0, 238);
+    --palette-color-8: rgba(255, 255, 255, 0.2);
+    
+    --palette-color-10: rgb(99, 91, 255);
+    --palette-color-11: rgb(246, 249, 251);
+    --palette-color-12: rgb(63, 75, 102);
+    --palette-color-13: rgb(10, 37, 64);
+    --palette-color-18: rgb(169, 96, 238);
+    --palette-color-19: rgb(58, 58, 58);
+    --palette-color-20: rgb(98, 120, 141);
+    --palette-color-21: rgb(81, 93, 225);
+    --palette-color-22: rgb(0, 126, 83);
+ 
+    --palette-color-26: rgb(11, 48, 85);
+    --palette-color-27: rgb(42, 105, 254);
+    --palette-color-28: rgb(102, 120, 143);
+    --palette-color-30: rgb(46, 58, 85);
+    --palette-color-31: rgb(153, 102, 255);
+    --palette-color-32: rgb(21, 190, 83);
+    --palette-color-33: rgba(21, 190, 83, 0.3);
+    --palette-color-34: rgba(99, 91, 255, 0.3);
+    --palette-color-35: rgb(0, 115, 230);
+    --palette-color-36: rgb(61, 201, 201);
+    --palette-color-37: rgb(12, 194, 255);
+    --palette-color-38: rgb(173, 189, 204);
+    --palette-color-39: rgba(66, 71, 112, 0.3);
+    --palette-color-41: rgb(0, 67, 119);
+    --palette-color-43: rgb(66, 176, 213);
+    
+    --palette-color-45: rgb(0, 102, 177);
+    --palette-color-49: rgb(122, 115, 255);
+    --palette-color-54: rgb(128, 149, 255);
+    
+    --palette-color-56: rgb(25, 67, 105);
+    --palette-color-57: rgb(6, 24, 44);
+    --palette-color-58: rgb(255, 217, 106);
+    --palette-color-59: rgb(245, 240, 234);
+    --palette-color-60: rgb(135, 146, 162);
+    --palette-color-61: rgb(38, 38, 39);
+    --palette-color-62: rgb(54, 70, 87);
+    
+    
+    
+  
+  /* ============font sizes========== */
+  --ff-body: ;
+  --fs-h1: 3.5rem;
+  --fs-h2: 2.5rem;
+  --fs-h3: 1.2rem;
+  --fs-h4: 0.5rem;
+  --fs-nav: 1.2rem;
+
+  /* ==============font weight====== */
+  --fw-normal: 400;
+  --fw-bold: 500;
+  --fw-bolder: 700;
+
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================header section==== */
+.header {
+ 
+  background: var(--main-gray);
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  z-index: 99 !important;
+  position: sticky;
+  top: 0;
+  transition: all 0.5s;
+}
+.header.sticking {
+  background: var(--primary-white);
+}
+
+
+.nav-bar {
+  display: flex;
+  z-index: 999999 !important;
+}
+.hamburger {
+  display: none;
+}
+.nav-bar ul {
+  display: flex;
+}
+.nav-bar ul li a {
+  display: block;
+  color: var(--main-dark);
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  border-radius: 4rem;
+  transition: 0.2s;
+  margin: 0 0.5rem;
+}
+
+
+@media only screen and (max-width: 1320px) {
+  .header {
+    padding: 0 4rem;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .header {
+    padding: 0 3rem;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .header {
+    background: var(--main-gray);
+  }
+ .hamburger {
+  display: block;
+  cursor: pointer;
+ }
+ .hamburger .line {
+  width: 30px;
+  height: 3px;
+  background: var(--accent-color);
+  margin: 6px 0;
+ }
+ .nav-bar {
+  height: 0px;
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background: var(--main-gray);
+  color: var(--main-dark);
+  transition: 0.5s;
+  overflow: hidden;
+ }
+ .nav-bar.active {
+  height: 450px;
+ }
+ .nav-bar ul {
+  display: block;
+  width: fit-content;
+  margin: 80px auto 0 auto;
+  text-align: center;
+  transition: 0.5s;
+  opacity: 0;
+ }
+ .nav-bar.active ul {
+  opacity: 1;
+ }
+ .nav-bar ul li a {
+  margin-bottom: 1rem;
+  color: var(--main-dark);
+ }
+}
+
+
+
+.nav-logo span {
+  color: var(--accent-color);
+}
+
+
+/* ===============hero banner ==== */
+.hero-section {
+  background: var(--main-gray);
+}
+@media (min-width:720px) {
+  /* .hero-wrap {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    gap: 2rem ;
+  } */
+}
+
+.hero-tagline {
+  color: gray;
+  line-height: 1.6;
+}
+.btn-hero {
+  background: var(--accent-color);
+  color: var(--primary-white);
+  padding:  1rem;
+  border-radius: 2rem;
+  border: none;
+}
+.btn-w {
+  background: var(--primary-white);
+  color: var(--main-dark);
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border: none;
+  gap: 1rem ;
+  border-radius: 2rem;
+}
+.stock-search input {
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+}
+.blue-btn {
+  background: var(--accent-color);
+  color: var(--primary-white);
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+}
+
+.stock-search  {
+  position: relative;
+}
+.stock-search img {
+  position:absolute;
+  right: 220px;
+  top: 10px;
+  cursor: pointer;
+  z-index: 1;
+}
+.stock-box-search {
+  position: relative;
+}
+.stock-box-search input {
+  padding: 25px 35px 25px 15px;
+    max-width: 560px;
+    width: 100%;
+    height: calc(1.5em + 0.75rem + 2px);
+}
+/* ==============why us section === */
+.btn-dark {
+  background: var(--main-dark);
+  color: var(--primary-white);
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem ;
+  transition: all 0.3s ease-in-out;
+}
+.btn-dark:hover {
+  background: transparent;
+  color: var(--main-dark);
+  border: 1px solid var(--main-dark);
+}
+.feature-wrap {
+margin: 4rem 0 2rem 0;
+}
+.hover-card {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  transition: all 0.4s;
+}
+.hover-card:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 2rem;
+}
+
+/* ========================courses and community====== */
+.explore-courses {
+  background:var(--light-accent);
+}
+.explore-community {
+  background: var(--light-accent);
+}
+/* =====================offer-section========== */
+.offer-section {
+  background: var(--light-accent);
+}
+.offer-card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: var(--primary-white);
+  transition: all 0.5s;
+}
+.offer-card:hover {
+  background: var(--primary-color);
+  color: var(--primary-white);
+}
+.offer-wrap {
+  grid-template-areas:
+  'one'
+  'two'
+  'three'
+  'four'
+  'five' ;
+}
+
+.card-1 {
+  grid-area: one;
+}
+.card-2 {
+  grid-area: two;
+}
+.card-3 {
+  grid-area: three;
+}
+.card-4 {
+  grid-area: four;
+}
+.card-5 {
+  grid-area: five;
+}
+@media (min-width:700px) {
+  .offer-wrap {
+    grid-template-areas:
+    'one three three four four'
+    'two three three five five' ;
+  }
+}
+
+@media (max-width:900px) {
+  .offer-wrap {
+    grid-template-areas: 
+    'one one two two'
+    'three three three three'
+    'four four five five'
+    ;
+  } 
+}
+@media (max-width: 500px) {
+  .offer-wrap {
+    grid-template-areas:
+    'one'
+    'two'
+    'three'
+    'four'
+    'five' ;
+  }
+}
+
+
+
+
+/* ====================pricing demo  */
+.pricing-demo {
+  background: rgb(26,26,26);
+  color: var(--primary-white);
+}
+.price-demo-wrap {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  
+}
+.feature-text {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.feature-name {
+ font-size: 1.8rem;
+ line-height: 2.25rem;
+ font-weight: 500;
+}
+.demo-price-info {
+  
+  width: 100%;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem ;
+  padding: 1rem ;
+}
+.demo-btn {
+  background: transparent;
+  color: #22C3E6;
+  border: 2px dotted #22C3E6;
+  border-radius: 0.4rem;
+  padding: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem ;
+  transition: all 0.3s ease-out;
+}
+.demo-btn:hover, 
+.demo-btn:focus {
+  background: #22C3E6;
+  color: #0D0D0D;
+}
+
+
+
+
+ /* =======================discover section======== */
+ .discover-section {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+ }
+ .discover-wrap {
+  background: var(--accent-color);
+  color: var(--primary-white);
+ }
+
+
+/* =============================================accordion======= */
+
+
+
+ /* =========================footer====== */
+.footer {
+  background:linear-gradient( rgba(10, 37, 64, 0.7), rgba(10, 37, 64, 0.8)), url(/content/stock-char.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--primary-white);
+}
+
+@media (max-width:600px) {
+  .footer-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem ;
+  }
+  .footer-menu {
+    margin: 1rem;
+  }
+}
+.newsletter-form input{
+  background:var(--main-gray) ;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+  
+}
+.newsletter-form  {
+  position: relative;
+}
+.newsletter-form .news-submit {
+  background: var(--primary-color);
+  color: var(--primary-white);
+  padding: 0.8rem;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  position: absolute;
+  top: 31.5%;
+  right: 0;
+}
+.footer-menu {
+  justify-content: space-between;
+}
+.footer-menu a {
+  color: var(--primary-white);
+}
+.footer-info a {
+  color: var(--primary-white);
+}
+.footer-info i {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+}
+.social-icons i {
+  font-size: 1.2rem;
+  background-color: var(--primary-color);
+  color: var(--primary-white);
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+
+/* ===================course page ===== */
+.banner-1 {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+.banner-1 img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+@media (max-width: 720px) {
+  .banner-box {
+  position: absolute;
+  top: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem ;
+  border-radius: 0.5rem;
+  background: var(--primary-white);
+  margin: 1rem;
+  padding: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+ 
+}
+
+.banner-box {
+  position: absolute;
+  top: 10%;
+  width: 90%;
+  max-width: 800px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem ;
+  background: var(--primary-white);
+  margin: 2rem;
+  padding: 2.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.course-search {
+  position: relative;
+}
+.course-search input{
+  padding: 1rem;
+  width: 100%
+}
+.course-search i {
+  position:absolute ;
+  right: 1rem;
+  top: 1rem;
+}
+/* =============course section  */
+.course-section {
+  margin: 2.5rem;
+}
+.course-container {
+  padding: 1.5rem;
+  border: 1px groove;
+}
+.course-type a {
+  font-size: 1rem;
+  color: gray;
+  font-weight: 600;
+}
+.course-type {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+
+}
+.course-type a:hover {
+  color: #0D0D0D;
+}
+.courses-type-info {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.course-card {
+  max-width: 18rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem ;
+}
+.course-card img {
+  border: 1px solid rgb(102, 101, 101);
+}
+
+.course-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem ;
+}
+
+
+
+@media (max-width: 500px) {
+  .course-list {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.cart-cta i {
+  border: 2px solid gray;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cart-cta i:hover {
+  color: red;
+}
+.cart-btn {
+  background: var(--primary-color);
+  color: var(--primary-white);
+  border: 2px solid var(--primary-color);
+  padding: 0.6rem 2rem;
+  border-radius: 0.8rem;
+  transition: all 0.3s ease-in;
+}
+.cart-btn:hover, 
+.cart-btn:focus {
+  background: var(--primary-white);
+  color: var(--primary-color);
+}
