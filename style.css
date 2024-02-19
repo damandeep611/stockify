@@ -115,9 +115,7 @@ li {
   transition: all 0.5s;
   color: var(--primary-white);
 }
-.header.sticking {
-  background: var(--primary-white);
-}
+
 .logo-text {
   text-decoration: none;
   font-size: 2rem;
@@ -335,6 +333,13 @@ li {
   }
   .hero-card-info p {
     font-size: 0.8rem ;
+  }
+  .hero-wrap {
+    padding: 1.5rem;
+  }
+  .hero-right {
+    width: 100%;
+    padding: 2rem 1rem  ;
   }
 }
 
