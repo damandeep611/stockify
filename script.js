@@ -5,6 +5,8 @@ const hamburger = document.querySelector(".hamburger");
     navBar.classList.toggle("active");
   }
 
+
+  // ================change color on scroll header with sticky
 const primaryHeader = document.querySelector('.header');
 const scrollWatcher = document.createElement('div');
 

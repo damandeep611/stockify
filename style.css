@@ -102,7 +102,7 @@ li {
 /* ==========================header section==== */
 .header {
  
-  background: var(--main-gray);
+  background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
   width: 100%;
   height: 4rem;
   display: flex;
@@ -113,11 +113,22 @@ li {
   position: sticky;
   top: 0;
   transition: all 0.5s;
+  color: var(--primary-white);
 }
 .header.sticking {
   background: var(--primary-white);
 }
+.logo-text {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: inherit;
+}
 
+.nav-logo span {
+  color: var(--accent-color);
+}
 
 .nav-bar {
   display: flex;
@@ -131,7 +142,7 @@ li {
 }
 .nav-bar ul li a {
   display: block;
-  color: var(--main-dark);
+  color: inherit;
   font-size: 1rem;
   padding: 1rem 1rem;
   border-radius: 4rem;
@@ -152,7 +163,7 @@ li {
 }
 @media only screen and (max-width: 900px) {
   .header {
-    background: var(--main-gray);
+    background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
   }
  .hamburger {
   display: block;
@@ -171,7 +182,7 @@ li {
   left: 0;
   right: 0;
   width: 100vw;
-  background: var(--main-gray);
+  background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
   color: var(--main-dark);
   transition: 0.5s;
   overflow: hidden;
@@ -198,76 +209,98 @@ li {
 
 
 
-.nav-logo span {
-  color: var(--accent-color);
-}
 
 
 /* ===============hero banner ==== */
 .hero-section {
-  background: var(--main-gray);
+  background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
+  color: var(--primary-white);
 }
 @media (min-width:720px) {
-  /* .hero-wrap {
-    display: grid;
+  .hero-wrap {
     grid-template-columns: 70% 30%;
-    gap: 2rem ;
-  } */
+  }
 }
-
 .hero-tagline {
-  color: gray;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--main-gray);
+}
+.heading-1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+.hero-wrap {
+  padding: 2.4rem;
+}
+.hero-left {
+  padding-top: 2rem;
+}
+.hero-p {
+  color: rgba(255, 255, 255, .79);
   line-height: 1.6;
+  font-size: 1.25rem;
+  font-weight: 300;
 }
-.btn-hero {
-  background: var(--accent-color);
-  color: var(--primary-white);
-  padding:  1rem;
-  border-radius: 2rem;
-  border: none;
-}
-.btn-w {
-  background: var(--primary-white);
-  color: var(--main-dark);
+.button-row {
+  padding-top: 2rem;
   display: flex;
   align-items: center;
-  padding: 1rem;
-  border: none;
-  gap: 1rem ;
-  border-radius: 2rem;
+  gap: 2rem ;
 }
-.stock-search input {
-  padding: 1rem 2rem;
-  border-radius: 0.8rem;
-  border: none;
-}
-.blue-btn {
-  background: var(--accent-color);
+.hero-btn {
+  padding: 1rem 1.5rem;
+  line-height: 1.6;
+  font-size: 1rem;
+  font-weight: 500;
   color: var(--primary-white);
-  border: none;
-  padding: 1rem 2rem;
+}
+.btn-demo {
+  background: skyblue;
+  border-radius: 0.4rem;
+  letter-spacing: 0.075rem;
+}
+.btn-why {
+  border: 2px solid var(--primary-white);
+  border-radius: 0.4rem;
+  letter-spacing: 0.075rem;
+  box-shadow: inset 0 0 0 1px #fff;
+}
+.hero-links {
+  width: 100%;
+  max-width: 600px;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+.hero-links a {
+  border: 1px solid var(--main-gray);
+  font-size: 0.8rem ;
   border-radius: 0.8rem;
+  padding: 0.2rem 0.5rem;
+  color: var(--primary-white);
+}
+.hero-links a:hover {
+  background: var(--primary-white);
+  color: #002b60;
 }
 
-.stock-search  {
-  position: relative;
+/* ======hero right card  */
+.hero-right {
+  width: 100%;
 }
-.stock-search img {
-  position:absolute;
-  right: 220px;
-  top: 10px;
-  cursor: pointer;
-  z-index: 1;
+.hero-card {
+  background: var(--primary-white);
 }
-.stock-box-search {
-  position: relative;
-}
-.stock-box-search input {
-  padding: 25px 35px 25px 15px;
-    max-width: 560px;
-    width: 100%;
-    height: calc(1.5em + 0.75rem + 2px);
-}
+
+
+
+
+
+
+
 /* ==============why us section === */
 .btn-dark {
   background: var(--main-dark);
