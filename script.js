@@ -6,9 +6,7 @@ const hamburger = document.querySelector(".hamburger");
   }
 
 
-  // ================change color on scroll header with sticky
-// 
-
+ 
 
 
 

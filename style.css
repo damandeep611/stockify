@@ -101,8 +101,7 @@ li {
 
 /* ==========================header section==== */
 .header {
- 
-  background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
+ background: #053979;
   width: 100%;
   height: 4rem;
   display: flex;
@@ -161,7 +160,7 @@ li {
 }
 @media only screen and (max-width: 900px) {
   .header {
-    background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
+    background: #002b60;
   }
  .hamburger {
   display: block;
@@ -180,7 +179,7 @@ li {
   left: 0;
   right: 0;
   width: 100vw;
-  background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
+  background: #f8f8f8;
   color: var(--main-dark);
   transition: 0.5s;
   overflow: hidden;
@@ -211,8 +210,18 @@ li {
 
 /* ===============hero banner ==== */
 .hero-section {
-  background-image: linear-gradient(to left bottom, #051937, #002b60, #003d8d, #0750bb, #2762ea);
+  background: rgba(0, 0, 0, .1);
   color: var(--primary-white);
+  position: relative;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  background: url(/content/icons/stock-market-bg.jpg)no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+
 }
 @media (min-width:720px) {
   .hero-wrap {
