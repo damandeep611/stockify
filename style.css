@@ -304,17 +304,32 @@ li {
   flex-direction: column;
   justify-content: center;
   gap: 1.2rem;
-  padding: 0.6rem 0.8rem;
-  border-radius: 0.8rem;
-  background: var(--main-gray);
+  padding: 0.8rem 0.4rem 0.2rem 0.4rem;
+  border-radius: 1rem;
+  background: var(--primary-white);
+}
+.hero-card-info {
+  padding: 0.4rem;
 }
 .hero-card-info a {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   letter-spacing: 0.08rem;
   color: #002b60;
   font-weight: 700;
   text-decoration: none;
 }
+.hero-card-info a:hover,
+.hero-card-info a:focus {
+  color: #2762ea;
+}
+.hero-card-info a:hover i,
+.hero-card-info a:focus i {
+  color: #346beb; /* New color on hover */
+  transform: translateX(5px); /* Move horizontally by 2px on hover */
+  transition: color 0.5s ease-in-out, transform 0.4s; /* Smooth transition effect */
+}
+
+
 .hero-card-info p {
   color: #002b60;
   font-size: 1rem;
@@ -387,7 +402,10 @@ margin: 4rem 0 2rem 0;
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   border-radius: 2rem;
 }
-
+.explore-card-img img {
+  max-width: 185px;
+  max-height: 185px;
+}
 /* ========================courses and community====== */
 .explore-courses {
   background:var(--light-accent);
@@ -483,14 +501,12 @@ margin: 4rem 0 2rem 0;
  font-weight: 500;
 }
 .demo-price-info {
-  
   width: 100%;
-  
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 1.2rem ;
-  padding: 1rem ;
+  padding: 1rem 0.2rem ;
 }
 .demo-btn {
   background: transparent;
@@ -498,16 +514,26 @@ margin: 4rem 0 2rem 0;
   border: 2px dotted #22C3E6;
   border-radius: 0.4rem;
   padding: 0.6rem;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.5rem ;
+  
+  gap: 0.4rem ;
+  font-size: 0.8rem;
+  font-weight: 700;
   transition: all 0.3s ease-out;
 }
+.demo-btn:hover i {
+  transform: translateX(4px); /* Move icon 2px to the right on hover */
+  transition: transform 0.3s ease-out; /* Smooth transition effect */
+}
+
 .demo-btn:hover, 
 .demo-btn:focus {
   background: #22C3E6;
   color: #0D0D0D;
 }
+
+
 
 
 
